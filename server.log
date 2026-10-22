@@ -2,3 +2,4 @@ INFO: Server started successfully
 INFO: Server is off
 ERROR: Database connection failed
 WARNING: server memory usage is high
+ERROR: Test error from DevOps practice

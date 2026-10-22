@@ -2,6 +2,14 @@ FROM python:3.12-slim
 
 WORKDIR /app
 
-COPY monitor.py server.log test_monitor.py ./
+COPY requirements.txt .
+RUN pip install --no-cache-dir -r requirements.txt
 
-CMD ["python", "monitor.py"]
+COPY app.py .
+COPY monitor.py .
+COPY server.log .
+COPY templates/ templates/
+
+EXPOSE 5000
+
+CMD ["python", "app.py"]
